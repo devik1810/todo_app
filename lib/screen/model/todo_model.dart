@@ -1,6 +1,5 @@
-class TodoModel
-{
-  String? name, id, std;
+class TodoModel {
+  String? name, std;
 
-  TodoModel({this.name, this.id, this.std});
+  TodoModel({this.name, this.std});
 }

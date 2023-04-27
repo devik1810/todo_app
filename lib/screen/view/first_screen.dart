@@ -30,7 +30,8 @@ class _HomeState extends State<FirstScreen> {
           centerTitle: true,
           title: Text(
             "Todo Data",
-            style: TextStyle(fontSize: 22, color: Colors.white),
+            style: TextStyle(
+                fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
         body: Padding(
@@ -42,16 +43,16 @@ class _HomeState extends State<FirstScreen> {
                 decoration: InputDecoration(
                   label: Text(
                     "Name",
-                    style: TextStyle(color: Color(0xff44B6B5)),
+                    style: TextStyle(color: Color(0xff44B6B5))
                   ),
                   border: OutlineInputBorder(),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xff44B6B5), width: 1),
+                    borderSide: BorderSide(color: Color(0xff44B6B5), width: 1)
                   ),
                 ),
               ),
               SizedBox(
-                height: 8,
+                height: 8
               ),
               TextField(
                 controller: txtstd,
@@ -62,12 +63,12 @@ class _HomeState extends State<FirstScreen> {
                   ),
                   border: OutlineInputBorder(),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xff44B6B5), width: 1),
+                    borderSide: BorderSide(color: Color(0xff44B6B5), width: 1)
                   ),
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 15
               ),
               Align(
                 alignment: Alignment.bottomCenter,
@@ -88,8 +89,10 @@ class _HomeState extends State<FirstScreen> {
                       itemCount: todoProvider!.l1.length,
                       itemBuilder: (context, index) {
                         return ListTile(
-                          title: Text("${todoProvider!.l1[index].name}",style: TextStyle(color: Color(0xff44B6B5))),
-                          subtitle: Text("${todoProvider!.l1[index].std}",style: TextStyle(color: Color(0xff44B6B5))),
+                          title: Text("${todoProvider!.l1[index].name}",
+                              style: TextStyle(color: Color(0xff44B6B5))),
+                          subtitle: Text("${todoProvider!.l1[index].std}",
+                              style: TextStyle(color: Color(0xff44B6B5))),
                           trailing: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -115,20 +118,20 @@ class _HomeState extends State<FirstScreen> {
                                           TextField(
                                             controller: dtxtname,
                                             decoration: InputDecoration(
-                                              border: OutlineInputBorder(),
+                                              border: OutlineInputBorder()
                                             ),
                                           ),
                                           SizedBox(
-                                            height: 5,
+                                            height: 5
                                           ),
                                           TextField(
                                             controller: dtxtstd,
                                             decoration: InputDecoration(
-                                              border: OutlineInputBorder(),
+                                              border: OutlineInputBorder()
                                             ),
                                           ),
                                           SizedBox(
-                                            height: 5,
+                                            height: 5
                                           ),
                                           ElevatedButton(
                                             onPressed: () {
@@ -140,7 +143,7 @@ class _HomeState extends State<FirstScreen> {
                                                   .updateData(index, r1);
                                               Navigator.pop(context);
                                             },
-                                            child: Text("update"),
+                                            child: Text("Update"),
                                             style: ElevatedButton.styleFrom(
                                                 backgroundColor:
                                                     Color(0xff44B6B5)),

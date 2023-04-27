@@ -17,17 +17,8 @@ class _LodinScreenState extends State<LodinScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color(0xff44B6B5),
-          centerTitle: true,
-          elevation: 0,
-          title: Text(
-            "TODO",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
         body: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
